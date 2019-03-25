@@ -11,7 +11,7 @@
 import random
 import time
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
 
 
 print("""
@@ -24,6 +24,7 @@ Press Ctrl+C to exit!
 
 """)
 
+matrix11x7 = Matrix11x7()
 
 # Avoid retina-searage!
 matrix11x7.set_brightness(0.5)

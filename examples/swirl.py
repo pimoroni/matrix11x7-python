@@ -3,7 +3,8 @@
 import time
 import math
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
+matrix11x7 = Matrix11x7()
 
 print("""
 Matrix 11x7: Swirl
@@ -16,8 +17,8 @@ Press Ctrl+C to exit!
 
 
 def swirl(x, y, step):
-    x -= (matrix11x7.DISPLAY_WIDTH / 2.0)
-    y -= (matrix11x7.DISPLAY_HEIGHT / 2.0)
+    x -= (matrix11x7.width / 2.0)
+    y -= (matrix11x7.height / 2.0)
 
     dist = math.sqrt(pow(x, 2) + pow(y, 2))
 
@@ -39,8 +40,8 @@ matrix11x7.set_brightness(0.8)
 while True:
     timestep = math.sin(time.time() / 18) * 1500
 
-    for x in range(0, matrix11x7.DISPLAY_WIDTH):
-        for y in range(0, matrix11x7.DISPLAY_HEIGHT):
+    for x in range(0, matrix11x7.width):
+        for y in range(0, matrix11x7.height):
             v = swirl(x, y, timestep)
             matrix11x7.pixel(x, y, v)
 

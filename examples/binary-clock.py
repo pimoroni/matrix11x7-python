@@ -19,10 +19,13 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor,
 # Boston, MA 02110-1301 USA
 
-import matrix11x7
 import datetime
 import math
 import random
+
+from matrix11x7 import Matrix11x7
+
+matrix11x7 = Matrix11x7()
 
 
 class Time(object):

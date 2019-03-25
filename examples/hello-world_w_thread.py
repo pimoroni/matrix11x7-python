@@ -2,7 +2,8 @@
 
 import threading
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
+matrix11x7 = Matrix11x7()
 
 
 def autoscroll(interval=0.1):

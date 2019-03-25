@@ -11,7 +11,9 @@ try:
 except ImportError:
     exit("This script requires the numpy module\nInstall with: sudo pip install numpy")
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
+
+matrix11x7 = Matrix11x7()
 
 
 print("""
@@ -29,9 +31,8 @@ def mainloop():
     # set up the scrollPhat
     matrix11x7.clear()
     # Uncomment the below if your display is upside down
-    # (e.g. if you're using it in a Pimoroni Scroll Bot)
     # matrix11x7.rotate(degrees=180)
-    matrix11x7.set_brightness(0.1)
+    matrix11x7.set_brightness(0.2)
 
     # define a list of some interesting rule numbers to loop through
     rules = [22, 30, 54, 60, 75, 90, 110, 150]
@@ -42,11 +43,11 @@ def mainloop():
     loopCount = 0
 
     # define the matrix of cells and rows that we will be displaying
-    matrix = numpy.zeros((7, 17), dtype=numpy.int)
+    matrix = numpy.zeros((7, 11), dtype=numpy.int)
 
     # set the initial condition of the first row
     # "dot" = single cell at position (0,8); top row, middle LED
-    firstRow = [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    firstRow = [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
     matrix[0] = firstRow
 
     # We need to keep track of which row we are working on
@@ -61,7 +62,7 @@ def mainloop():
 
         # redraw first so that it shows the initial contitions when first run
         for y in range(0, 7):
-            for x in range(0, 17):
+            for x in range(0, 11):
                 matrix11x7.pixel(x, y, matrix[y, x])
 
         matrix11x7.show()
@@ -73,7 +74,7 @@ def mainloop():
             # reset a bunch of stuff
             loopCount = 0
             row = 0
-            matrix = numpy.zeros((7, 17), dtype=numpy.int)
+            matrix = numpy.zeros((7, 11), dtype=numpy.int)
             matrix[0] = firstRow
             # get a new rule
             rules = numpy.roll(rules, -1, axis=0)
@@ -83,13 +84,13 @@ def mainloop():
         inputRow = matrix[row]
 
         # make an empty array to fill with values
-        outputRow = numpy.zeros((17), dtype=numpy.int)
+        outputRow = numpy.zeros((11), dtype=numpy.int)
 
         #  the secret sauce...
         #  step through each cell in the output row, calculate its value
         #  from the state of the input cell above and its left and right neighbour
 
-        for x in range(0, 17):
+        for x in range(0, 11):
 
             #  for each output cell, get the values of the input cell
             #  and its left and right neighbours.
@@ -100,9 +101,9 @@ def mainloop():
             #  so we will use the value of cell 0, effectively wrapping
             #  the horizontal edges of the display
 
-            a = inputRow[x - 1] if x > 0 else inputRow[16]
+            a = inputRow[x - 1] if x > 0 else inputRow[10]
             b = inputRow[x]
-            c = inputRow[x + 1] if x < 16 else inputRow[0]
+            c = inputRow[x + 1] if x < 10 else inputRow[0]
 
             #  a, b and c now contain the states of the three input cells
             #  that determine the state of our output cell

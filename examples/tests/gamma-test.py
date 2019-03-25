@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 
 import time
-import matrix11x7
+from matrix11x7 import Matrix11x7
+matrix11x7 = Matrix11x7()
 
-DELAY = 0.0001
+DELAY = 0.001
 
 try:
     while True:
-        for x in range(255):
+        for x in range(20, 48):
             matrix11x7.fill(x / 255.0, 0, 0, 17, 7)
             matrix11x7.show()
             time.sleep(DELAY)
-        for x in reversed(range(255)):
+        for x in reversed(range(20, 48)):
             matrix11x7.fill(x / 255.0, 0, 0, 17, 7)
             matrix11x7.show()
             time.sleep(DELAY)

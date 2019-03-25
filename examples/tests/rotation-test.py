@@ -2,7 +2,8 @@
 
 import time
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
+matrix11x7 = Matrix11x7()
 
 matrix11x7.set_pixel(0, 0, 1)
 matrix11x7.set_pixel(1, 1, 1)

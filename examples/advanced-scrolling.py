@@ -2,7 +2,10 @@
 
 import time
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
+
+matrix11x7 = Matrix11x7()
+
 
 print("""
 Matrix 11x7: Advanced Scrolling
@@ -35,7 +38,7 @@ lines = ["In the old #BILGETANK we'll keep you in the know",
          "Then we'll grab a cup of grog down in the old #BILGETANK"]
 
 # Determine how far apart each line should be spaced vertically
-line_height = matrix11x7.DISPLAY_HEIGHT + 2
+line_height = matrix11x7.height + 2
 
 # Store the left offset for each subsequent line (starts at the end of the last line)
 offset_left = 0

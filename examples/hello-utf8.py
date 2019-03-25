@@ -3,7 +3,7 @@
 
 import time
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
 from matrix11x7.fonts import font5x7
 from six import unichr
 

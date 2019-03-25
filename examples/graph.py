@@ -3,7 +3,7 @@
 import time
 import random
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
 
 print("""
 Matrix 11x7: Graph
@@ -14,6 +14,8 @@ Press Ctrl+C to exit!
 
 """)
 
+matrix11x7 = Matrix11x7()
+
 MIN_VALUE = 0
 MAX_VALUE = 50
 
@@ -22,14 +24,14 @@ MAX_VALUE = 50
 # matrix11x7.rotate(degrees=180)
 
 # Begin with a list of 17 zeros
-values = [0] * matrix11x7.DISPLAY_WIDTH
+values = [0] * matrix11x7.width
 
 while True:
     # Insert a random value at the beginning
     values.insert(0, random.randrange(MIN_VALUE, MAX_VALUE))
 
-    # Get rid of the last value, keeping the list at 17 (DISPLAY_WIDTH) items
-    values = values[:matrix11x7.DISPLAY_WIDTH]
+    # Get rid of the last value, keeping the list at 17 (width) items
+    values = values[:matrix11x7.width]
 
     # Plot the random values onto Matrix 11x7
     matrix11x7.set_graph(values, low=MIN_VALUE, high=MAX_VALUE, brightness=0.3)

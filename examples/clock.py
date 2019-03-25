@@ -2,8 +2,10 @@
 
 import time
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
 from matrix11x7.fonts import font5x5
+
+matrix11x7 = Matrix11x7()
 
 print("""
 Matrix 11x7: Clock

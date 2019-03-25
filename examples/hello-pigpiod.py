@@ -3,7 +3,7 @@
 import time
 
 import pigpio
-import matrix11x7
+from matrix11x7 import Matrix11x7
 
 print("""
 Matrix 11x7: Hello World
@@ -14,6 +14,8 @@ using the default 5x7 pixel large font.
 Press Ctrl+C to exit!
 
 """)
+
+matrix11x7 = Matrix11x7()
 
 
 class I2C_PIGPIO():

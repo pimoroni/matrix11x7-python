@@ -18,7 +18,8 @@
 # happened randomly until I re-soldered the header connections on the RPi as well as the hat.
 #
 
-import matrix11x7  # default matrix11x7 library
+from matrix11x7 import Matrix11x7
+matrix11x7 = Matrix11x7()  # default matrix11x7 library
 from matrix11x7.fonts import font3x5
 try:
     import urllib.request as urllib2

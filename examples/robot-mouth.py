@@ -8,7 +8,8 @@ try:
 except ImportError:
     exit("This script requires the pillow module\nInstall with: sudo pip install pillow")
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
+matrix11x7 = Matrix11x7()
 
 
 print("""
@@ -36,8 +37,8 @@ def get_pixel(x, y):
 
 
 try:
-    for x in range(0, matrix11x7.DISPLAY_WIDTH):
-        for y in range(0, matrix11x7.DISPLAY_HEIGHT):
+    for x in range(0, matrix11x7.width):
+        for y in range(0, matrix11x7.height):
             brightness = get_pixel(x, y)
             matrix11x7.pixel(x, 6 - y, brightness * IMAGE_BRIGHTNESS)
 

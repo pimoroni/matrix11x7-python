@@ -8,7 +8,7 @@ try:
 except ImportError:
     sys.exit("This script requires the psutil module\nInstall with: sudo pip install psutil")
 
-import matrix11x7
+from matrix11x7 import Matrix11x7
 
 print("""
 Matrix 11x7: CPU
@@ -19,9 +19,11 @@ Press Ctrl+C to exit!
 
 """)
 
+matrix11x7 = Matrix11x7()
+
 i = 0
 
-cpu_values = [0] * matrix11x7.DISPLAY_WIDTH
+cpu_values = [0] * matrix11x7.width
 
 # Uncomment the below if your display is upside down
 # (e.g. if you're using it in a Pimoroni Scroll Bot)

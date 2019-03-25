@@ -1,5 +1,6 @@
 import time
-import matrix11x7
+from matrix11x7 import Matrix11x7
+matrix11x7 = Matrix11x7()
 
 while True:
     for y in range(7):
