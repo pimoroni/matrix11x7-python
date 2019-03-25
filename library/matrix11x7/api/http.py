@@ -1,4 +1,4 @@
-import matrix11x7
+from matrix11x7 import Matrix11x7
 
 import threading
 
@@ -21,7 +21,7 @@ from flask import Blueprint, render_template, abort, request, jsonify, Flask
 
 matrix11x7_blueprint = Blueprint('matrix11x7', __name__)
 api_queue = Queue()
-
+matrix11x7 = Matrix11x7()
 
 class AutoScroll():
     _is_enabled = False

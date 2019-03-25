@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 from matrix11x7 import Matrix11x7
 matrix11x7 = Matrix11x7()
-from matrix11x7.api.http from matrix11x7 import Matrix11x7
-matrix11x7 = Matrix11x7()_blueprint
+from matrix11x7.api.http import matrix11x7_blueprint
 from matrix11x7.fonts import font3x5
 from flask import Flask
 
@@ -23,7 +22,7 @@ if __name__ == "__main__":
     def index():
         return """<html><head><title>Matrix 11x7 - API Demo</title></head><body>
 <h1>Matrix 11x7 - API Demo</h1>
-<p>This simple API demo shows you how to blend Scroll pHAT's HTTP API blueprint into a Flask application, so you can control your Matrix 11x7 over HTTP.</p>
+<p>This simple API demo shows you how to blend the 11x7 LED Matrix's HTTP API blueprint into a Flask application, so you can control your 11x7 Matrix over HTTP.</p>
 <fieldset><legend><b>Text</b></legend>
     <form method="post" action="/show"><table style='width:100%'><tr>
         <td style='width:100%'><input style='width:99%' type="text" name="text" value="Hello World"></td>
