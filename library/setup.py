@@ -28,28 +28,28 @@ except ImportError:
     from distutils.core import setup
 
 classifiers = ['Development Status :: 5 - Production/Stable',
-               'Operating System :: POSIX :: Linux',
-               'License :: OSI Approved :: MIT License',
-               'Intended Audience :: Developers',
-               'Programming Language :: Python :: 2.6',
-               'Programming Language :: Python :: 2.7',
-               'Programming Language :: Python :: 3',
-               'Topic :: Software Development',
-               'Topic :: System :: Hardware']
+ 'Operating System :: POSIX :: Linux',
+ 'License :: OSI Approved :: MIT License',
+ 'Intended Audience :: Developers',
+ 'Programming Language :: Python :: 2.6',
+ 'Programming Language :: Python :: 2.7',
+ 'Programming Language :: Python :: 3',
+ 'Topic :: Software Development',
+ 'Topic :: System :: Hardware']
 
 setup(
-    name            = 'matrix11x7',
-    version         = '0.0.1',
-    author          = 'Philip Howard',
-    author_email    = 'phil@pimoroni.com',
-    description     = '11x7 LED Matrix Driver',
-    long_description= open('README.rst').read() + "\n" + open('CHANGELOG.txt').read(),
-    license         = 'MIT',
-    keywords        = 'Raspberry Pi LED',
-    url             = 'http://www.pimoroni.com',
-    classifiers     = classifiers,
-    py_modules      = [],
-    packages        = ['matrix11x7','matrix11x7.fonts'],
+    name = 'matrix11x7',
+    version = '0.0.1',
+    author = 'Philip Howard',
+    author_email = 'phil@pimoroni.com',
+    description = '11x7 LED Matrix Driver',
+    long_description = open('README.rst').read() + '\n' + open('CHANGELOG.txt').read(),
+    license = 'MIT',
+    keywords = 'Raspberry Pi LED',
+    url = 'http://www.pimoroni.com',
+    classifiers = classifiers,
+    py_modules = [],
+    packages = ['matrix11x7','matrix11x7.fonts'],
     include_package_data = True,
-    install_requires= [ 'numpy' ]
+    install_requires= ['numpy']
 )

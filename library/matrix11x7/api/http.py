@@ -23,6 +23,7 @@ matrix11x7_blueprint = Blueprint('matrix11x7', __name__)
 api_queue = Queue()
 matrix11x7 = Matrix11x7()
 
+
 class AutoScroll():
     _is_enabled = False
     _interval = 0.1
@@ -48,7 +49,7 @@ class AutoScroll():
 
 
 @matrix11x7_blueprint.route('/autoscroll', methods=["POST"])
-def autoscroll():
+def ascroll():
     response = {"result": "success"}
     status_code = http_status.OK
 
@@ -138,7 +139,7 @@ def cleanup():
     autoscroll.config()
     # Clear the buffer before writing new text
     matrix11x7.clear()
-    
+
 
 def run():
     while True:
