@@ -16,9 +16,9 @@ except ImportError:
     exit("This script requires the tweepy module\nInstall with: sudo pip install tweepy")
 
 from matrix11x7 import Matrix11x7
-matrix11x7 = Matrix11x7()
 from matrix11x7.fonts import font5x7
 
+matrix11x7 = Matrix11x7()
 
 # adjust the tracked keyword below to your keyword or #hashtag
 keyword = '#bilgetank'

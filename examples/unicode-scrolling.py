@@ -3,10 +3,8 @@
 import time
 
 from matrix11x7 import Matrix11x7
-matrix11x7 = Matrix11x7()
 from matrix11x7.fonts import font5x7unicode
 
-matrix11x7.set_font(font5x7unicode)
 
 print("""
 Matrix 11x7: Simple Scrolling
@@ -16,6 +14,15 @@ single messages across the display.
 
 Press Ctrl+C to exit.
 """)
+
+matrix11x7 = Matrix11x7()
+
+matrix11x7.set_font(font5x7unicode)
+
+try:
+    unichr(0)
+except NameError:
+    unichr = chr
 
 
 def scroll_message(message):

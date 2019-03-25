@@ -19,6 +19,8 @@ Press Ctrl+C to exit!
 
 """)
 
+matrix11x7 = Matrix11x7()
+
 # Uncomment to rotate the text
 # matrix11x7.rotate(180)
 

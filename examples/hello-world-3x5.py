@@ -3,7 +3,6 @@
 import time
 
 from matrix11x7 import Matrix11x7
-matrix11x7 = Matrix11x7()
 from matrix11x7.fonts import font3x5
 
 print("""
@@ -15,6 +14,8 @@ in a 3x5 pixel condensed font.
 Press Ctrl+C to exit!
 
 """)
+
+matrix11x7 = Matrix11x7()
 
 # Uncomment the below if your display is upside down
 # (e.g. if you're using it in a Pimoroni Scroll Bot)

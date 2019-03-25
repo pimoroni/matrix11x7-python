@@ -4,8 +4,6 @@ import time
 
 from matrix11x7 import Matrix11x7
 
-matrix11x7 = Matrix11x7()
-
 print("""
 Matrix 11x7: Hello World
 
@@ -15,6 +13,8 @@ using the default 5x7 pixel large font.
 Press Ctrl+C to exit!
 
 """)
+
+matrix11x7 = Matrix11x7()
 
 # Uncomment the below if your display is upside down
 # (e.g. if you're using it in a Pimoroni Scroll Bot)

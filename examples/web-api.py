@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 from matrix11x7 import Matrix11x7
-matrix11x7 = Matrix11x7()
 from matrix11x7.api.http import matrix11x7_blueprint
 from matrix11x7.fonts import font3x5
 from flask import Flask
+
+matrix11x7 = Matrix11x7()
 
 # Set the font
 matrix11x7.set_font(font3x5)

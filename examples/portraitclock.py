@@ -3,7 +3,6 @@
 import time
 
 from matrix11x7 import Matrix11x7
-matrix11x7 = Matrix11x7()
 from matrix11x7.fonts import font5x5
 
 print("""
@@ -14,6 +13,8 @@ Displays hours, minutes and seconds in text.
 Press Ctrl+C to exit!
 
 """)
+
+matrix11x7 = Matrix11x7()
 
 matrix11x7.set_brightness(0.3)
 matrix11x7.rotate(270)

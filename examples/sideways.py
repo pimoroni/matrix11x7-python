@@ -3,7 +3,6 @@
 import time
 
 from matrix11x7 import Matrix11x7
-matrix11x7 = Matrix11x7()
 from matrix11x7.fonts import font5x7
 
 print("""
@@ -16,6 +15,7 @@ Press Ctrl+C to exit!
 
 """)
 
+matrix11x7 = Matrix11x7()
 matrix11x7.rotate(degrees=90)
 
 # Set a more eye-friendly default brightness

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from matrix11x7 import Matrix11x7
+
 matrix11x7 = Matrix11x7()
 
 try:
