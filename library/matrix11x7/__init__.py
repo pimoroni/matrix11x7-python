@@ -473,7 +473,7 @@ class Matrix11x7:
         self._current_frame = 0
         self._scroll = [0, 0]
 
-        self.buf = numpy.zeros((DISPLAY_WIDTH, DISPLAY_HEIGHT))
+        self.buf = numpy.zeros((self.width, self.height))
 
     def get_buffer_shape(self):
         """Get the size/shape of the internal buffer.
@@ -497,6 +497,14 @@ class Matrix11x7:
 
         y = self.height - 1 - y
         return mapping[(y * self.width) + x]
+
+    def set_font(self, font):
+        """Change the default font.
+
+        :param font: font object to use
+
+        """
+        self._font = font
 
     def _exit(self):
         self.clear()
