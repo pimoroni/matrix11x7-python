@@ -7,6 +7,9 @@ from matrix11x7.fonts import font5x7 as font5x7
 
 matrix11x7 = Matrix11x7()
 
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
+
 # Uncomment the below if your display is upside down
 # (e.g. if you're using it in a Pimoroni Scroll Bot)
 # matrix11x7.rotate(degrees=180)

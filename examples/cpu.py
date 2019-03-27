@@ -21,6 +21,9 @@ Press Ctrl+C to exit!
 
 matrix11x7 = Matrix11x7()
 
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
+
 i = 0
 
 cpu_values = [0] * matrix11x7.width
@@ -34,7 +37,7 @@ while True:
         cpu_values.pop(0)
         cpu_values.append(psutil.cpu_percent())
 
-        matrix11x7.set_graph(cpu_values, low=0, high=25, brightness=0.25)
+        matrix11x7.set_graph(cpu_values, low=0, high=25)
 
         matrix11x7.show()
         time.sleep(0.2)

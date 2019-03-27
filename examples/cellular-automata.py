@@ -15,7 +15,6 @@ from matrix11x7 import Matrix11x7
 
 matrix11x7 = Matrix11x7()
 
-
 print("""
 Matrix 11x7: Cellular Automata
 
@@ -32,7 +31,9 @@ def mainloop():
     matrix11x7.clear()
     # Uncomment the below if your display is upside down
     # matrix11x7.rotate(degrees=180)
-    matrix11x7.set_brightness(0.2)
+
+    # Avoid retina-searage!
+    matrix11x7.set_brightness(0.5)
 
     # define a list of some interesting rule numbers to loop through
     rules = [22, 30, 54, 60, 75, 90, 110, 150]

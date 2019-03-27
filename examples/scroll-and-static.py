@@ -21,12 +21,11 @@ matrix11x7 = Matrix11x7()
 #   (e.g. if you're using it in a Pimoroni Scroll Bot)
 # matrix11x7.rotate(degrees=180)
 
-# Set a more eye-friendly default brightness
+# Avoid retina-searage!
 matrix11x7.set_brightness(0.5)
 
 # Write the string to scroll
-matrix11x7.write_string(" Hello World! ", x=0, y=1, font=font3x5, brightness=1.0)
-
+matrix11x7.write_string(" Hello World! ", x=0, y=1, font=font3x5)
 
 def draw_static_elements(buf):
     # Buf is given as a two dimensional array of elements buf[x][y]
@@ -45,7 +44,6 @@ def draw_static_elements(buf):
                 buf[matrix11x7.width - 1][y] = 1.0
 
     return buf
-
 
 try:
     while True:

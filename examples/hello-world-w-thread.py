@@ -5,6 +5,8 @@ import threading
 from matrix11x7 import Matrix11x7
 matrix11x7 = Matrix11x7()
 
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
 
 def autoscroll(interval=0.1):
     """Autoscroll with a thread (recursive function).
@@ -37,9 +39,8 @@ Press Ctrl+C to exit!
 #   (e.g. if you're using it in a Pimoroni Scroll Bot)
 # matrix11x7.rotate(degrees=180)
 
-# Write the "Hello World!" string in the buffer and
-#   set a more eye-friendly default brightness
-matrix11x7.write_string(" Hello World!", brightness=0.5)
+# Write the "Hello World!" string in the buffer
+matrix11x7.write_string(" Hello World!")
 
 # Auto scroll using a thread
 autoscroll()

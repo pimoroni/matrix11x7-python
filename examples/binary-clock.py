@@ -27,6 +27,8 @@ from matrix11x7 import Matrix11x7
 
 matrix11x7 = Matrix11x7()
 
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
 
 class Time(object):
     def __init__(self):
@@ -66,7 +68,7 @@ class Clock(Time):
 
 class BinaryClock(Clock):
     def __init__(self):
-        self._SPHD = ScrollPhatHD()
+        self._matrix = Matrix()
         self._max_degree = 45
         self._hand_position = [2, 4, 7, 9, 12, 14]
         self._hand_bits = 4
@@ -76,7 +78,7 @@ class BinaryClock(Clock):
 
     def _draw_binary(self, x, value):
         for y in range(self._hand_bits):
-            self._SPHD.set_pixel(
+            self._matrix.set_pixel(
                 x,
                 ((self._hand_bits - 1 - y) * 2),
                 1 if value & (1 << y) > 0 else self._brightness[x][y])
@@ -102,7 +104,7 @@ class BinaryClock(Clock):
 
     def draw(self):
         Clock.draw(self)
-        self._SPHD.show()
+        self._matrix.show()
 
     def _intensities_init(self, max_intensity):
         self._intensities = {
@@ -135,7 +137,7 @@ class BinaryClock(Clock):
         self._brightness_step()
 
 
-class ScrollPhatHD(object):
+class Matrix(object):
     def __init__(self):
         matrix11x7.rotate(180)
         matrix11x7.clear()

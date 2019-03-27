@@ -6,10 +6,10 @@ matrix11x7 = Matrix11x7()
 
 try:
     while True:
-        for x in range(18):
-            matrix11x7.fill(0.1, 0, 0, x, 7)
+        for x in range(12):
+            matrix11x7.fill(0.5, 0, 0, x, 7)
             matrix11x7.show()
-        for x in range(18):
+        for x in range(12):
             matrix11x7.fill(0, 0, 0, x, 7)
             matrix11x7.show()
 

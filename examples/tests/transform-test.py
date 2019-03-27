@@ -18,6 +18,9 @@ Press Ctrl+C to exit!
 
 matrix11x7 = Matrix11x7()
 
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
+
 parser = argparse.ArgumentParser(description='Scroll Hat HD transformation test.')
 
 parser.add_argument('-r', '--rotate', metavar='DEGREES', type=int, help='Rotate the display.', default=0)
@@ -29,10 +32,8 @@ parser.add_argument('-m', '--message', metavar='MESSAGE', type=str, help='Messag
 
 args = parser.parse_args()
 
-matrix11x7.set_brightness(0.5)
 matrix11x7.clear()
-matrix11x7.write_string(args.message, x=0, y=0, font=font3x5, brightness=0.5)
-
+matrix11x7.write_string(args.message, x=0, y=0, font=font3x5)
 
 while True:
     matrix11x7.flip(args.flip_x, args.flip_y)
