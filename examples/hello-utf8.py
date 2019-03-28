@@ -24,14 +24,14 @@ matrix11x7 = Matrix11x7()
 # Uncomment to rotate the text
 # matrix11x7.rotate(180)
 
-# Set a more eye-friendly default brightness
+# Avoid retina-searage!
 matrix11x7.set_brightness(0.5)
 
 text = [unichr(x) for x in range(256)]
 
 text = u"{}        ".format(u"".join(text))
 
-matrix11x7.write_string(text, x=0, y=0, font=font5x7, brightness=0.5)
+matrix11x7.write_string(text, x=0, y=0, font=font5x7)
 
 while True:
     matrix11x7.show()

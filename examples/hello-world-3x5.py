@@ -17,13 +17,15 @@ Press Ctrl+C to exit!
 
 matrix11x7 = Matrix11x7()
 
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
+
 # Uncomment the below if your display is upside down
 # (e.g. if you're using it in a Pimoroni Scroll Bot)
 # matrix11x7.rotate(degrees=180)
 
-# Write the "Hello World!" string in the buffer and
-# set a more eye-friendly default brightness
-matrix11x7.write_string(" Hello World!", y=1, font=font3x5, brightness=0.5)
+# Write the "Hello World!" string in the buffer
+matrix11x7.write_string(" Hello World!", y=1, font=font3x5)
 
 # Auto scroll using a while + time mechanism (no thread)
 while True:

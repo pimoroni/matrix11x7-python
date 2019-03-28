@@ -1,5 +1,4 @@
-:`11x7 Matrix <matrix11x7-python-logo.png>`__
-https://shop.pimoroni.com/products/matrix11x7-python
+https://shop.pimoroni.com/products/11x7-led-matrix-breakout
 
 11x7 pixels of single-colour, brightness-controlled, message scrolling
 goodness!
@@ -13,10 +12,10 @@ Full install (recommended):
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We've created an easy installation script that will install all
-pre-requisites and get your 11x7 Matrix up and running with minimal
-efforts. To run it, fire up Terminal which you'll find in Menu ->
-Accessories -> Terminal on your Raspberry Pi desktop, as illustrated
-below:
+pre-requisites and get your 11x7 LED Matrix Breakout up and running 
+with minimal efforts. To run it, fire up Terminal which you'll find 
+in Menu -> Accessories -> Terminal on your Raspberry Pi desktop, as 
+illustrated below:
 
 .. figure:: http://get.pimoroni.com/resources/github-repo-terminal.png
    :alt: Finding the terminal

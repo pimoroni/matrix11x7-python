@@ -18,11 +18,10 @@ Press Ctrl+C to exit!
 matrix11x7 = Matrix11x7()
 matrix11x7.rotate(degrees=90)
 
-# Set a more eye-friendly default brightness
+# Avoid retina-searage!
 matrix11x7.set_brightness(0.5)
 
-matrix11x7.write_string("Hello World! ", x=0, y=0, font=font5x7)
-matrix11x7.write_string("How are you? ", x=0, y=8, font=font5x7)
+matrix11x7.write_string("Hello World! ", x=0, y=2, font=font5x7)
 matrix11x7.show()
 
 time.sleep(0.5)

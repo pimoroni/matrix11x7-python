@@ -20,8 +20,8 @@ Press Ctrl+C to exit.
 #   (e.g. if you're using it in a Pimoroni Scroll Bot)
 # matrix11x7.rotate(degrees=180)
 
-# Dial down the brightness
-matrix11x7.set_brightness(0.2)
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
 
 # If rewind is True the scroll effect will rapidly rewind after the last line
 rewind = True

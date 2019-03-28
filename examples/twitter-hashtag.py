@@ -20,6 +20,9 @@ from matrix11x7.fonts import font5x7
 
 matrix11x7 = Matrix11x7()
 
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
+
 # adjust the tracked keyword below to your keyword or #hashtag
 keyword = '#bilgetank'
 
@@ -52,8 +55,8 @@ def mainloop():
         try:
             matrix11x7.clear()
             status = q.get(False)
-            matrix11x7.write_string(status, font=font5x7, brightness=0.1)
-            status_length = matrix11x7.write_string(status, x=0, y=0, font=font5x7, brightness=0.1)
+            matrix11x7.write_string(status, font=font5x7)
+            status_length = matrix11x7.write_string(status, x=0, y=0, font=font5x7)
             time.sleep(0.25)
 
             while status_length > 0:

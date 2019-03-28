@@ -1,10 +1,10 @@
-"""Python library for the Pimoroni 11x7 Matrix 11x7 pixel LED display."""
+"""Python library for the Pimoroni 11x7 LED Matrix Breakout."""
 import atexit
 from . import is31fl3731
 from .fonts import font5x7
 import numpy
 
-__version__ = '1.2.1'
+__version__ = '0.0.1'
 
 DISPLAY_WIDTH = width = 11
 DISPLAY_HEIGHT = height = 7
@@ -92,7 +92,7 @@ class Matrix11x7:
     def set_clear_on_exit(self, value=True):
         """Set whether 11x7 Matrix should be cleared upon exit.
 
-        By default 11x7 Matrix will turn off the pixerl on exit, but calling::
+        By default, 11x7 Matrix will turn off the pixel on exit, but calling::
 
             matrix11x7.set_clear_on_exit(False)
 
@@ -159,7 +159,7 @@ class Matrix11x7:
     def show(self, before_display=None):
         """Show the buffer contents on the display.
 
-        The buffer is copied, then scrolling, rotation and flip y/x transforms applied before taking a 11x7 slice and displaying.
+        The buffer is copied, then scrolling, rotation and flip y/x transforms applied before taking an 11x7 slice and displaying.
 
         """
         self._current_frame = not self._current_frame
@@ -257,7 +257,7 @@ class Matrix11x7:
     def scroll(self, x=1, y=0):
         """Offset the buffer by x/y pixels.
 
-        11x7 Matrix displaya a 11x7 pixel window into the buffer,
+        11x7 Matrix displays an 11x7 pixel window into the buffer,
         which starts at the left/x offset and wraps around.
 
         Supplied x and y values are added to the internal scroll offset.
@@ -274,7 +274,7 @@ class Matrix11x7:
     def scroll_to(self, x=0, y=0):
         """Scroll the buffer to a specific location.
 
-        11x7 Matrix displays a 11x7 pixel window into the buffer.
+        11x7 Matrix displays an 11x7 pixel window into the buffer
         which starts at the left/x offset and wraps around.
 
         Supplied x and y values set the internal scroll offset.
@@ -291,7 +291,7 @@ class Matrix11x7:
     def rotate(self, degrees=0):
         """Rotate the buffer 0, 90, 180 or 270 degrees before displaying.
 
-        :param degrees: Amount to rotate- will snap to nearest 90
+        :param degrees: Amount to rotate, will snap to nearest 90
 
         """
         self._rotate = int(round(degrees / 90.0))
@@ -450,7 +450,7 @@ class Matrix11x7:
         if (x + width) > self.buf.shape[0] or (y + height) > self.buf.shape[1]:
             self.buf = self.grow_buffer(x + width, y + height)
 
-        # fill in one operation using a slice
+        # Fill in one operation using a slice
         self.buf[x:x + width, y:y + height] = brightness
 
     def clear_rect(self, x, y, width, height):

@@ -16,7 +16,7 @@ try:
         for x in range(matrix11x7.width):
             for y in range(matrix11x7.height):
                 offset += 1
-                color = 0.25 * scale * (offset % 2)
+                color = 0.5 * scale * (offset % 2)
                 matrix11x7.pixel(x, y, color)
 
         matrix11x7.show()

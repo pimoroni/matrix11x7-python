@@ -16,7 +16,9 @@ Press Ctrl+C to exit!
 
 matrix11x7 = Matrix11x7()
 
-matrix11x7.set_brightness(0.3)
+# Avoid retina-searage!
+matrix11x7.set_brightness(0.5)
+
 matrix11x7.rotate(270)
 
 while True:
