@@ -4,6 +4,8 @@ https://shop.pimoroni.com/products/matrix11x7-python
 11x7 pixels of single-colour, brightness-controlled, message scrolling
 goodness!
 
+|Build Status| |Coverage Status| |PyPi Package| |Python Versions|
+
 Installing
 ----------
 
@@ -18,8 +20,6 @@ below:
 
 .. figure:: http://get.pimoroni.com/resources/github-repo-terminal.png
    :alt: Finding the terminal
-
-   Finding the terminal
 
 In the new terminal window type the command exactly as it appears below
 (check for typos) and follow the on-screen instructions:
@@ -68,3 +68,12 @@ Documentation & Support
 -----------------------
 
 -  Get help - http://forums.pimoroni.com/c/support
+
+.. |Build Status| image:: https://travis-ci.com/pimoroni/matrix11x7-python.svg?branch=master
+   :target: https://travis-ci.com/pimoroni/matrix11x7-python
+.. |Coverage Status| image:: https://coveralls.io/repos/github/pimoroni/matrix11x7-python/badge.svg?branch=master
+   :target: https://coveralls.io/github/pimoroni/matrix11x7-python?branch=master
+.. |PyPi Package| image:: https://img.shields.io/pypi/v/matrix11x7.svg
+   :target: https://pypi.python.org/pypi/matrix11x7
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/matrix11x7.svg
+   :target: https://pypi.python.org/pypi/matrix11x7

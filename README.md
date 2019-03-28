@@ -3,6 +3,11 @@ https://shop.pimoroni.com/products/matrix11x7-python
 
 11x7 pixels of single-colour, brightness-controlled, message scrolling goodness!
 
+[![Build Status](https://travis-ci.com/pimoroni/matrix11x7-python.svg?branch=master)](https://travis-ci.com/pimoroni/matrix11x7-python)
+[![Coverage Status](https://coveralls.io/repos/github/pimoroni/matrix11x7-python/badge.svg?branch=master)](https://coveralls.io/github/pimoroni/matrix11x7-python?branch=master)
+[![PyPi Package](https://img.shields.io/pypi/v/matrix11x7.svg)](https://pypi.python.org/pypi/matrix11x7)
+[![Python Versions](https://img.shields.io/pypi/pyversions/matrix11x7.svg)](https://pypi.python.org/pypi/matrix11x7)
+
 ## Installing
 
 ### Full install (recommended):
