@@ -1,5 +1,8 @@
 """Python library for the Pimoroni 11x7 LED Matrix Breakout."""
-import atexit
+try:
+    import atexit
+except ImportError:
+    print("atexit not found. Matrix behaviour will be undefined on exit")
 from . import is31fl3731
 from .fonts import font5x7
 import numpy
@@ -87,7 +90,10 @@ class Matrix11x7:
 
         self.clear()
 
-        atexit.register(self._exit)
+        try:
+            atexit.register(self._exit)
+        except NameError:
+            pass
 
     def set_clear_on_exit(self, value=True):
         """Set whether 11x7 Matrix should be cleared upon exit.
