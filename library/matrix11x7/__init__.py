@@ -107,8 +107,7 @@ class Matrix11x7:
         :param value: True or False (default True)
 
         """
-        global _clear_on_exit
-        _clear_on_exit = value
+        self._clear_on_exit = value
 
     def set_pixel(self, x, y, brightness):
         """Set a single pixel in the buffer.
@@ -513,5 +512,6 @@ class Matrix11x7:
         self._font = font
 
     def _exit(self):
-        self.clear()
-        self.show()
+        if self._clear_on_exit:
+            self.clear()
+            self.show()
